@@ -148,3 +148,7 @@ Open an elevated command prompt (as administrator)
 
 [source,batch,linenums]
 slmgr.vbs /skms <host>:<port>
+
+== Activate
+[source,batch,linenums]
+slmgr.vbs /ato
