@@ -1,5 +1,5 @@
 :doctype: book
-:doctitle: Windows Cookbook
+:doctitle: Windows KMS Setup
 :docdate: February 22, 2018
 :author: Jerod Gawne
 :email: jerod.gawne@vantiv.com
