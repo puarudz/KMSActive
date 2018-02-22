@@ -150,5 +150,7 @@ Open an elevated command prompt (as administrator)
 slmgr.vbs /skms <host>:<port>
 
 == Activate
+https://docs.microsoft.com/en-us/windows/deployment/volume-activation/activate-using-key-management-service-vamt[Microsoft Docs]
+
 [source,batch,linenums]
 slmgr.vbs /ato
