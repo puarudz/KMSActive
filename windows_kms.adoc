@@ -3,9 +3,9 @@
 :docdate: February 22, 2018
 :author: Jerod Gawne
 :email: jerod.gawne@vantiv.com
-:revnumber: 0.0.1
+:revnumber: 1.1.0
 :revdate: February 22, 2018
-:revremark: initial
+:revremark: add office activation procedures
 :description: setup windows
 :library: Asciidoctor
 :keywords: windows, kms
@@ -130,13 +130,28 @@ https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys[Micoro
 
 .Office  2010, 2013, 2016
 |===
-|Operating System | KMS Key
+|Software | KMS Key
 
 |Office 2010 Professional Plus  |VYBBJ-TRJPB-QFQRF-QFT4D-H3GVB
 |Office 2013 Professional Plus  |YC7DK-G2NP3-2QQC3-J6H88-GVGXT
 |Office 2016 Professional Plus  |XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
+|MS Office edition	|JNRGM-WHDWX-FJJG3-K47QV-DRTFM
+|Project Professional 2016	|YG9NW-3K39V-2T3HJ-93F3Q-G83KT
+|Project Standard 2016	|GNFHQ-F6YQM-KQDGJ-327XX-KQBVC
+|Visio Professional 2016	|PD3PC-RHNGV-FXJ29-8JK7D-RJRJK
+|Visio Standard 2016	|7WHWN-4T7MP-G96JF-G33KR-W8GF4
+|Access 2016	|GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW
+|MS Excel 2016	|9C2PK-NWTVB-JMPW8-BFT28-7FTBF
+|MS OneNote 2016	|DR92N-9HTF2-97XKM-XW2WJ-XW3J6
+|Microsoft Outlook 2016	|R69KK-NTPKF-7M3Q4-QYBHW-6MT9B
+|Microsoft PowerPoint 2016	|J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6
+|Microsoft Publisher 2016	|F47MM-N3XJP-TQXJ9-BP99D-8K837
+|Skype for Business 2016	|869NQ-FJ69K-466HW-QYCP2-DDBV6
+|MS Word 2016	|WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6
 |===
-== Install KMS Key
+
+== Windows
+=== Install KMS Key
 https://docs.microsoft.com/en-us/windows/deployment/volume-activation/activate-using-key-management-service-vamt[Microsoft Docs]
 
 .Open an elevated command prompt (as administrator)
@@ -147,8 +162,7 @@ slmgr.vbs /ipk <kms-key>
 [source,batch,linenums]
 slmgr.vbs /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
 
-
-== Configure KMS Client
+=== Configure KMS Client
 https://technet.microsoft.com/en-us/library/ff793406.aspx[Technet]
 
 Open an elevated command prompt (as administrator)
@@ -156,8 +170,20 @@ Open an elevated command prompt (as administrator)
 [source,batch,linenums]
 slmgr.vbs /skms <host>:<port>
 
-== Activate
+=== Activate
 https://docs.microsoft.com/en-us/windows/deployment/volume-activation/activate-using-key-management-service-vamt[Microsoft Docs]
 
 [source,batch,linenums]
 slmgr.vbs /ato
+
+== Office
+=== 
+https://theitbros.com/ms-office-2016-activation-with-kms/[IT Bros]
+
+[source,powershell,linenums]
+CD “C:\Program Files (x86)\Microsoft Office\Office16”
+cscript ospp.vbs /inpkey:xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  // Install KMS Key
+cscript ospp.vbs /sethst:kms01.yourdomain.com  // Set KMS Server
+cscript ospp.vbs /setprt:1689  // Optionally set KMS Server Port
+cscript ospp.vbs /act  // Activate
+cscript ospp.vbs /dstatusall  // Optionally Check Current Status
