@@ -178,7 +178,7 @@ slmgr.vbs /ato
 
 == Office
 https://theitbros.com/ms-office-2016-activation-with-kms/[IT Bros]
-https://www.microsoft.com/en-us/download/details.aspx?id=49164
+https://www.microsoft.com/en-us/download/details.aspx?id=49164[Office 2016 Client Software License Management Tool]
 
 === Install KMS Key
 [source,powershell,linenums]
