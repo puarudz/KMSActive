@@ -177,13 +177,19 @@ https://docs.microsoft.com/en-us/windows/deployment/volume-activation/activate-u
 slmgr.vbs /ato
 
 == Office
-=== 
 https://theitbros.com/ms-office-2016-activation-with-kms/[IT Bros]
+https://www.microsoft.com/en-us/download/details.aspx?id=49164
 
+=== Install KMS Key
 [source,powershell,linenums]
-CD “C:\Program Files (x86)\Microsoft Office\Office16”
-cscript ospp.vbs /inpkey:xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  // Install KMS Key
-cscript ospp.vbs /sethst:kms01.yourdomain.com  // Set KMS Server
+cd "C:\Program Files\Microsoft Office\Office16"
+cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
+
+=== Set KMS Server
+[source,powershell,linenums]
+cscript ospp.vbs /sethst:kms01.yourdomain.com
 cscript ospp.vbs /setprt:1689  // Optionally set KMS Server Port
+
+=== Activate
 cscript ospp.vbs /act  // Activate
 cscript ospp.vbs /dstatusall  // Optionally Check Current Status
