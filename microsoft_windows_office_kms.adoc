@@ -1,24 +1,27 @@
 :doctype: book
-:doctitle: Windows KMS Setup
+:doctitle: Microsoft Windows and Office KMS Setup
 :docdate: February 22, 2018
 :author: Jerod Gawne
-:email: jerod.gawne@vantiv.com
-:revnumber: 1.1.0
-:revdate: February 22, 2018
-:revremark: add office activation procedures
-:description: setup windows
+:email: jerodgawne@gmail.com
+:revnumber: 1.3.0
+:revdate: May 08, 2018
+:revremark: change filename, update email, add reference, formatting
+:description: setup kms on microsoft windows and office
+:summary: #todo
 :library: Asciidoctor
-:keywords: windows, kms
-:source-highlighter: highlight.js
+:keywords: windows, kms, office
+:src-uri: https://gist.github.com/jerodg/502bd80a715347662e79af526c98f187[GitHubGist]
 :sectanchors:
 :sectlinks:
 :sectnums:
 :toc:
 
+*Author* {author} [{email}] +
+*Date* {docdate} *[Revision]* {revnumber}, {revdate} +
+*Tags* {keywords} +
+*Links* {src-uri}
+
 == Select Appropriate KMS Key
-https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys[Micorosft Docs]
-
-
 .Windows Server, version 1709
 |===
 |Operating System | KMS Key
@@ -152,8 +155,6 @@ https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys[Micoro
 
 == Windows
 === Install KMS Key
-https://docs.microsoft.com/en-us/windows/deployment/volume-activation/activate-using-key-management-service-vamt[Microsoft Docs]
-
 .Open an elevated command prompt (as administrator)
 [source,batch,linenums]
 slmgr.vbs /ipk <kms-key>
@@ -163,23 +164,16 @@ slmgr.vbs /ipk <kms-key>
 slmgr.vbs /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
 
 === Configure KMS Client
-https://technet.microsoft.com/en-us/library/ff793406.aspx[Technet]
-
 Open an elevated command prompt (as administrator)
 
 [source,batch,linenums]
 slmgr.vbs /skms <host>:<port>
 
 === Activate
-https://docs.microsoft.com/en-us/windows/deployment/volume-activation/activate-using-key-management-service-vamt[Microsoft Docs]
-
 [source,batch,linenums]
 slmgr.vbs /ato
 
 == Office
-https://theitbros.com/ms-office-2016-activation-with-kms/[IT Bros]
-https://www.microsoft.com/en-us/download/details.aspx?id=49164[Office 2016 Client Software License Management Tool]
-
 === Install KMS Key
 [source,powershell,linenums]
 cd "C:\Program Files\Microsoft Office\Office16"
@@ -191,5 +185,13 @@ cscript ospp.vbs /sethst:kms01.yourdomain.com
 cscript ospp.vbs /setprt:1689  // Optionally set KMS Server Port
 
 === Activate
+[source,powershell,linenums]
 cscript ospp.vbs /act  // Activate
 cscript ospp.vbs /dstatusall  // Optionally Check Current Status
+
+===== Reference
+* https://theitbros.com/ms-office-2016-activation-with-kms/[IT Bros]
+* https://www.microsoft.com/en-us/download/details.aspx?id=49164[Office 2016 Client Software License Management Tool]
+* https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys[Micorosft Docs KMS Keys]
+* https://docs.microsoft.com/en-us/windows/deployment/volume-activation/activate-using-key-management-service-vamt[Microsoft Docs KMS]
+* https://technet.microsoft.com/en-us/library/ff793406.aspx[Technet]
