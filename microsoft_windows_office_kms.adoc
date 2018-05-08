@@ -9,6 +9,7 @@
 :description: setup kms on microsoft windows and office
 :summary: #todo
 :library: Asciidoctor
+:source-highlighter: highlight.js
 :keywords: windows, kms, office
 :src-uri: https://gist.github.com/jerodg/502bd80a715347662e79af526c98f187[GitHubGist]
 :sectanchors:
