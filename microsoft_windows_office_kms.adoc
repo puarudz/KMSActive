@@ -3,9 +3,9 @@
 :docdate: February 22, 2018
 :author: Jerod Gawne
 :email: jerodgawne@gmail.com
-:revnumber: 1.3.0
+:revnumber: 1.3.1
 :revdate: May 08, 2018
-:revremark: change filename, update email, add reference, formatting
+:revremark: remove brackets from revision
 :description: setup kms on microsoft windows and office
 :summary: #todo
 :library: Asciidoctor
@@ -17,7 +17,7 @@
 :toc:
 
 *Author* {author} [{email}] +
-*Date* {docdate} *[Revision]* {revnumber}, {revdate} +
+*Date* {docdate} *Revision* {revnumber}, {revdate} +
 *Tags* {keywords} +
 *Links* {src-uri}
 
