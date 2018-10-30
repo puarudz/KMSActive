@@ -132,10 +132,10 @@
 |Windows Server 2008 for Itanium-Based Systems	|4DWFP-JF3DJ-B7DTH-78FJB-PDRHK
 |===
 
-.Office  2010, 2013, 2016
+.Office  2010, 2013, 2016, 2019
 |===
 |Software | KMS Key
-
+|Office 2019 Professional Plus? |NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP
 |Office 2010 Professional Plus  |VYBBJ-TRJPB-QFQRF-QFT4D-H3GVB
 |Office 2013 Professional Plus  |YC7DK-G2NP3-2QQC3-J6H88-GVGXT
 |Office 2016 Professional Plus  |XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
