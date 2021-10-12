@@ -23,6 +23,13 @@
 *Links* {src-uri}
 
 == Select Appropriate KMS Key
+.Windows Server 2022
+|===
+|Operating System | KMS Key
+|Windows Server 2022 Datacenter	| WX4NM-KYWYW-QJJR4-XV3QB-6VM33
+|Windows Server 2022 Standard	| VDYBN-27WPP-V4HQT-9VMD4-VMK7H
+
+
 .Windows Server, version 1709
 |===
 |Operating System | KMS Key
@@ -135,7 +142,7 @@
 .Office  2010, 2013, 2016, 2019
 |===
 |Software | KMS Key
-|Office 2019 Professional Plus? |NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP
+|Office 2019 Professional Plus  |NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP
 |Office 2010 Professional Plus  |VYBBJ-TRJPB-QFQRF-QFT4D-H3GVB
 |Office 2013 Professional Plus  |YC7DK-G2NP3-2QQC3-J6H88-GVGXT
 |Office 2016 Professional Plus  |XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
