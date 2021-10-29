@@ -308,6 +308,11 @@ slmgr.vbs /ipk <kms-key>
 
 .e.g. Windows 10 Enterprise
 [source,batch,linenums]
+# Remove Product Key
+slmgr /upk
+# Remove product key from registry
+slmgr /cpky
+
 slmgr.vbs /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
 
 === Configure KMS Client
